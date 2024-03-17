@@ -1,0 +1,41 @@
+online book store
+WHAT??
+A functionality where user can buy books of their choice
+
+online book store app functionalities
+1. user sign in/sign up
+2. see the list of books
+3. buy the books of your choice
+4. there is a route which shows the list of books based on your search category
+5. user data must contain their one unique email
+6. there should be one admin who can only maintain the the list of books
+7. user can change their password.
+8. user can login only with the email id and password
+9. admin can also buy the book
+
+--------------------------------------------------------------------------------------------------
+
+Routes
+
+User Authentication:
+    /signup: POST - create a new user account.
+    /login: POST - login to an existing account [ email + password]
+
+Books Information:
+    /books: GET - Get the list of books.
+    /books/:parameter - GET the book with the given parameter.
+    parameter can be name,author, category(e.g science,english,math etc.) or genre
+
+User Profile:
+    /profile: GET the user's profile information
+    /profile/password: PATCH - change the user's password
+
+Cart Management:
+    /cart/add - PATCH - user can add new book to it's cart.
+    /cart/update/:id - PATCH - user can update the quantity of the book having given id.
+    /cart/remove/:id - PATCH - user can remove the book from it's cart having the given id.
+
+Admin Candidate Management:
+    /book: POST - Add a new book.
+    /book/:book_id: PATCH - Update an existing book.
+    /book/:book_id: DELETE - Delete a book from the list.
